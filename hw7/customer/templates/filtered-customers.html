@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtered Customers</title>
+</head>
+<body>
+    <h1>Customers with @example.com</h1>
+
+    {% for customer in customers %}
+        <p>
+            Name: {{ customer.name }}<br>
+            Email: {{ customer.email }}
+        </p>
+        <hr>
+    {% empty %}
+        <p>No matching customers found.</p>
+    {% endfor %}
+
+    <a href="/">Add Customer</a>
+</body>
+</html>

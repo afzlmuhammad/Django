@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Customer</title>
+</head>
+<body>
+    <h1>Add Customer Details</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save Customer">
+    </form>
+
+    <a href="/all-customers/">View All Customers</a><br>
+    <a href="/filtered-customers/">View Filtered Customers</a>
+</body>
+</html>
